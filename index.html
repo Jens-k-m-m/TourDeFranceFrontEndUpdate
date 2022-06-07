@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crud Operation</title>
+
+<!--  <link type="text/css" rel="stylesheet" href="css/style.css">-->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+          crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<body>
+<table>
+  <tr>
+    <td>
+      <form>
+        <div>
+          <label class="text-primary">Rider</label>
+          <br>
+          <br>
+          <select  class="form-select" aria-label="Default select example" id="select" required>
+            <option value="" selected disabled hidden required>Riders Team</option>
+          </select>
+          <br>
+
+        </div>
+        <br>
+        <div class="form-floating mb-3">
+          <input type="text" id="riderFirstName" placeholder="name@example.com" class="form-control" pattern="[A-Za-z]{3}" title="Three letter country code" required>
+          <label for="riderFirstName" class="text-primary">First Name</label>
+
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" placeholder="riderLastName" id="riderLastName" class="form-control" required>
+          <label for="riderLastName" class="text-primary">Rider Last Name</label>
+
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="number" placeholder="riderAge" id="riderAge" class="form-control" required>
+          <label for="riderAge" class="text-primary">Rider Age </label>
+
+        </div>
+        <div class="form-floating mb-3">
+          <input type="number" placeholder="riderTime" id="riderTime" class="form-control" required>
+          <label for="riderTime" class="text-primary" required>Rider Time in minutes </label>
+
+        </div>
+        <div class="form-floating mb-3">
+          <input  type="number" placeholder="riderPoint" id="riderPoint" class="form-control" required>
+          <label for="riderPoint" class="text-primary">Rider Point </label>
+
+        </div>
+        <div class="form-floating mb-3">
+          <input type="number" placeholder="riderMountainPoints" id="riderMountainPoints" class="form-control" required>
+          <label for="riderMountainPoints" class="text-primary" required>Rider Mountain Points </label>
+
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" placeholder="riderCountry" id="riderCountry" class="form-control" required>
+          <label for="riderCountry" class="text-primary">Rider Country </label>
+        </div>
+
+        <div class="form_action_button">
+          <!--create riderID-->
+          <button type="button" id="create" class="btn btn-primary btn-lg"> Create</button>
+          <button  href="index.html" class="btn btn-outline-primary">Reset Create</button>
+        </div>
+      </form>
+
+    <td>
+      <table id="table" class="table table-bordered border-primary">
+
+          <form>
+            <div class="row row-cols-lg-auto g-3 align-items-center">
+
+              <div class="col">
+                <button  type="button" id="reset" class="btn btn-outline-primary">Reset Page</button>
+              </div>
+
+              <div class="col">
+                <button type="button" id="sortTime" class="btn btn-outline-primary"> SortTime</button>
+              </div>
+
+              <div class="form-floating mb-3 col">
+                <!--fine by getRiderFromGivenTeams-->
+                <input type="text" placeholder="Search Team ID" id="search-inputTeamId" class="form-control">
+                <label for="search-input" class="text-primary">Finde by Team Id </label>
+              </div>
+
+              <div class="col">
+                <button type="button" id="searchTeam" class="btn btn-outline-primary"> Find Team</button>
+              </div>
+
+              <div class="form-floating mb-3 col">
+                <!--delete riderID-->
+                <input type="number" placeholder="Delete Rider Id" id="riderId" class="form-control">
+                <label for="riderId" class="text-primary">Delete Rider By Id</label>
+              </div>
+
+              <div class="col">
+                <button type="button" id="delete" class="btn btn-outline-primary"> Delete</button>
+              </div>
+
+
+
+              <div class="form-floating mb-3 col">
+                <!--fine by frstName-->
+                <input type="text" placeholder="Search First Name" id="search-input" class="form-control">
+                <label for="search-input" class="text-primary">Finde by First Name </label>
+              </div>
+
+              <div class="col">
+                <button type="button" id="search" class="btn btn-outline-primary"> Find</button>
+              </div>
+
+
+
+              <div class="form-floating mb-3 col">
+                <!--fine by riderID-->
+                <input type="number" placeholder="SearchById" id="search-id" class="form-control">
+                <label for="search-id" class="text-primary">Update By Id </label>
+              </div>
+              <div class="col">
+                <button type="button" id="findID" class="btn btn-outline-primary"> Update</button>
+              </div>
+
+
+            </div>
+          </form>
+        </div>
+      </table>
+
+    <td>
+    </td>
+  </tr>
+</table>
+<span id="message"></span>
+<br>
+<script src="js/show.js"></script>
+<script src="js/create.js"></script>
+<script src="js/teams.js"></script>
+<script src="js/update.js"></script>
+<script src="js/delete.js"></script>
+
+
+</body>
+</html>
